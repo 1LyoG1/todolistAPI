@@ -4,9 +4,7 @@
   const todoModel = require('./todoList/model/todoModel');
   await database.open();
   await todoModel.sync({ alter: true });
-
   const port = process.env.PORT || 3000;
-
   const cors = require('cors');
   const express = require('express');
   const app = express();
