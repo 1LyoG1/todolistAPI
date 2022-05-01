@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/todolist', async (req, res) => {
+  //
   try {
     const todoModel = require('../model/todoModel');
     const result = await todoModel.findAndCountAll();
